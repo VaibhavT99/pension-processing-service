@@ -1,0 +1,9 @@
+com\authorizationMicroservice\controller\JWTController.class
+com\authorizationMicroservice\util\JWTUtil.class
+com\authorizationMicroservice\config\SpringSecurityConfiguration.class
+com\authorizationMicroservice\service\CustomUserDetailsService.class
+com\authorizationMicroservice\AuthorizationMicroserviceApplication.class
+com\authorizationMicroservice\repository\LoginRepository.class
+com\authorizationMicroservice\filter\JWTAuthenticationFilter.class
+com\authorizationMicroservice\model\JWTResponse.class
+com\authorizationMicroservice\model\User.class

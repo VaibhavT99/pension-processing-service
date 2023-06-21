@@ -1,0 +1,32 @@
+version: 0.2
+
+eureka:
+  instance:
+    statusPageUrl: https://${eureka.hostname}/info
+    healthCheckUrl: https://${eureka.hostname}/health
+    homePageUrl: https://${eureka.hostname}/
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  pre_build:
+    commands:
+      - echo Running pre build phases
+  build:
+    commands:
+      - echo build started on 'date'
+      - echo building JAR file
+      - mvn clean
+      - mvn compile
+      - mvn package
+  post_build:
+    commands:
+      - echo Build completed
+      - mv target/*.jar app.jar
+      - dir
+
+artifacts:
+  files: 
+    - app.jar
+  discard-paths: yes
